@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 const express = require("express")
-const fetchUsers = require("./UserController")
+const {fetchUsers, createUser, deleteUser, searchUserById, changeUserName} = require("./UserController")
 const fetchAdvert = require("./AdvertisimentController")
 const fetchCourses = require("./CoursesController")
 const cors = require("cors")
@@ -8,10 +8,15 @@ const cors = require("cors")
 const app = express()
 
 app.use(cors())
+app.use(express.json())
 
 mongoose.connect('mongodb+srv://yourHappyPet:ERNKQd7TeNi0726j@cluster0.2dvlxil.mongodb.net/educationproj-database')
 
 app.get("/getUsers", fetchUsers)
+app.post("/createUser", createUser)
+app.delete("/deleteUser/:id", deleteUser)
+app.get("/findUser/:id", searchUserById)
+app.put("/changeUserName", changeUserName)
 
 app.get("/getAdvert", fetchAdvert)
 

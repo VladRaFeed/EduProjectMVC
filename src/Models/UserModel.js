@@ -5,8 +5,9 @@ const userSchema = mongoose.Schema({
     name: String,
     age: Number
 })
-
+userSchema.set('versionKey', false);
 const UserModel = mongoose.model("users", userSchema)
+
 
 module.exports = {
     UserModel
