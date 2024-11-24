@@ -1,5 +1,10 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
+import { Route, Routes } from "react-router-dom";
+import Layout from "./Layout/Layout";
+import MainView from "./pages/Main/MainView";
+import CourseView from "./pages/Course/CourseView";
+import MarksView from "./pages/MarksList/MarksList";
 
 export const App = () => {
 
@@ -20,26 +25,14 @@ export const App = () => {
   }
 
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      <h2>MVC React-Node-Mongo temlptate </h2>
-      <ul>
-        {usersData.map(({_id, name, age}) => (
-          <li key={_id}>
-            <h1>Name of user: {name}</h1>
-            <p>Age of user: {age}</p>
-          </li>
-        )
-        )}
-      </ul>
+    <div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<MainView/>} />
+          <Route path="/courses" element={<CourseView/>} />
+          <Route path="/marks" element={<MarksView/>} />
+        </Route>
+      </Routes>
     </div>
   );
 };
