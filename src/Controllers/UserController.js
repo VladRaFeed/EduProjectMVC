@@ -10,7 +10,7 @@ const fetchUsers = (req,res) => {
 
 const createUser = (async(req, res) => {
     // const {_id: owner} = req.user
-    console.log(req.body, "req")
+    // console.log(req.body, "req")
     const data = req.body
     const newUser = {}
     if(data) {

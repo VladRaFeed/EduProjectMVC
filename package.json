@@ -11,6 +11,7 @@
     "cors": "^2.8.5",
     "express": "^4.21.1",
     "mongoose": "^8.8.1",
+    "notiflix": "^3.2.7",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^7.0.1",

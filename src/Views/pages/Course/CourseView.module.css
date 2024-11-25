@@ -1,0 +1,90 @@
+.courseTitle {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  line-height: 1.21;
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: -.03em;
+  text-align: center;
+  color: cornflowerblue;
+}
+
+.couseList {
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.courseTopLine {
+  position: absolute;
+  top: -15px;
+  left: 5px;
+  width: 1000px;
+  height: 8px;
+  border-radius: 40px;
+  background: linear-gradient(290deg, #419EF1 0%, #9BD0FF 107.89%);
+}
+
+.courseItem {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  position: relative;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 3px 8px 14px 0px rgba(136, 198, 253, 0.19);
+}
+
+.courseTitleBox {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.courseName {
+  color: #111;
+  font-size: 32px;
+  letter-spacing: -0.24px;
+}
+
+.courseInfo {
+  font-size: 20px;
+}
+
+
+.studentsBox {
+
+}
+
+.student {
+  font-size: 21px;
+  line-height: 1.5;
+  color: #9eb8ff;
+  letter-spacing: -.03em;
+}
+
+.taskBox {
+
+}
+
+.taskName {
+  color:#5e5e5d;
+}
+
+.taskInfo {
+
+}
+
+.advertBox {
+
+}
+
+.advertInfo {
+
+}
