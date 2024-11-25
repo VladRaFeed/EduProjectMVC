@@ -9,8 +9,6 @@ const fetchCourses = (req, res) => {
 }
 
 const createCourse = (async(req, res) => {
-    // const {_id: owner} = req.user
-    // console.log(req.body, "req")
     const data = req.body
     const newCourse = {}
     if(data) {
@@ -53,30 +51,8 @@ const deleteCourse = (async(req, res) => {
     })
 })
 
-// const searchCourseById = (async(req, res) => {
-//     const Userid = req.params.id
-
-//     CoursesModel.findById(Userid).then(function(user) {
-//         if(user) {
-//             res.status(200).json({
-//                 status: 200,
-//                 message: "Успішно знайдено користувача!",
-//                 data: user
-//             })
-//         } else {
-//             res.status(400).json({
-//                 status: 400,
-//                 message: "Користувача не знайдено, спробуйте ще раз!"
-//             })
-//         }
-//     }).catch(function(err) {
-//         console.log(err)
-//     })
-// })
-
 const searchCourseByName = async (req, res) => {
     const courseName = req.params.name; // Отримуємо назву курсу з параметрів запиту
-    // console.log(courseName)
 
     try {
         const course = await CoursesModel.findOne({ CourseName: courseName });

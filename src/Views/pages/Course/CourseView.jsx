@@ -77,7 +77,7 @@ const CourseView = () => {
             <h1 className={css.courseTitle}>Список курсів</h1>
             <form onSubmit={handleSubmit}>
                 <input type="text" placeholder="Пошук курсів" onChange={handleRequestChange}/>
-                <button type="submit">-></button>
+                <button type="submit">&#8594;</button>
             </form>
             <ul className={css.couseList}>
                 {coursesData.map(({_id, CourseName, CourseInfo, StudentsList, TasksList, AdvertisimentList}) => (

@@ -17,7 +17,7 @@ app.post("/createUser", createUser)
 app.delete("/deleteUser/:id", deleteUser)
 app.get("/findUser/:id", searchUserById)
 app.put("/changeUserName", changeUserName)
-
+ 
 app.get("/getAdvert", fetchAdvert)
 
 app.get("/getCourses", fetchCourses)
