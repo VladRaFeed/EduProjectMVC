@@ -1,0 +1,26 @@
+.nav_bar {
+  padding: 20px 0;
+  background-color: #a9bcdb;
+  display: flex;
+  justify-content: center;
+}
+
+.nav_list {
+  display: flex;
+  gap: 20px;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: #000;
+  padding: 12px 10px;
+  border: 2px solid #959696;
+  border-radius: 8px;
+  background-color: #a1c5ff;
+  transition: background-color 250ms linear;
+}
+
+.nav_link:hover,
+.nav_link:focus {
+  background-color: #83b2fc;
+}

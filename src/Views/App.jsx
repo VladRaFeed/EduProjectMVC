@@ -1,45 +1,42 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+// import axios from "axios";
+// import { useEffect, useState} from "react";
+import { Route, Routes } from "react-router-dom";
+import Layout from "./Layout/Layout";
+import MainView from "./pages/Main/MainView";
+import CourseView from "./pages/Course/CourseView";
+import MarksView from "./pages/MarksList/MarksList";
+import ChangeCourse from "./pages/Course/ChangeCourse"
+import CreateCourse from "./pages/Course/CreateCourse";
 
 export const App = () => {
 
-  const [usersData, setUsersData] = useState([])
+  // const [usersData, setUsersData] = useState([])
 
-  useEffect(() =>{
-    getUsers()
-  }, [])
+  // useEffect(() =>{
+  //   getUsers()
+  // }, [])
 
-  const getUsers = async () => {
-    try {
-      const {data} = await axios.get('http://localhost:5000/getUsers')
-      console.log({data})
-      setUsersData(data)
-    } catch (error) {
-      console.log(error)
-    }
-  }
+  // const getUsers = async () => {
+  //   try {
+  //     const {data} = await axios.get('http://localhost:5000/getUsers')
+  //     setUsersData(data)
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
 
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      <h2>MVC React-Node-Mongo temlptate </h2>
-      <ul>
-        {usersData.map(({_id, name, age}) => (
-          <li key={_id}>
-            <h1>Name of user: {name}</h1>
-            <p>Age of user: {age}</p>
-          </li>
-        )
-        )}
-      </ul>
+    <div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<MainView/>} />
+          <Route path="courses" element={<CourseView/>}>
+            <Route path="changeCourse/:id" element={<ChangeCourse/>}/>
+            <Route path="createCourse" element={<CreateCourse />} />
+          </Route>
+          <Route path="/marks" element={<MarksView/>} />
+        </Route>
+      </Routes>
     </div>
   );
 };

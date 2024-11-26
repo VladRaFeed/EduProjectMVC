@@ -8,6 +8,7 @@ const CourseSchema = mongoose.Schema({
     TasksList: Array,
     AdvertisimentList: Array,
 })
+CourseSchema.set('versionKey', false);
 
 const CoursesModel = mongoose.model("courses", CourseSchema)
 
