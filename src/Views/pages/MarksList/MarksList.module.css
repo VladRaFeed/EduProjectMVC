@@ -1,0 +1,144 @@
+/* Загальний стиль сторінки */
+.marksListContainer {
+  max-width: 800px;
+  margin: 30px auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Заголовок */
+.marksListContainer h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+/* Картка групи */
+.groupCard {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.groupCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Назва групи */
+.groupCard h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #444444;
+}
+
+/* Викладач */
+.groupCard .teacher {
+  font-size: 14px;
+  color: #666666;
+  margin-top: 5px;
+}
+
+/* Кнопка "Назад" */
+.backButton {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.backButton:hover {
+  background-color: #0056b3;
+}
+
+/* Картка студента */
+.studentCard {
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+/* Картка предмета */
+.subjectCard {
+  margin-bottom: 10px;
+}
+
+/* Кнопки для видалення та оновлення */
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+button:active {
+  background-color: #1e7e34;
+}
+
+/* Форми для створення нового журналу */
+.createForm {
+  background-color: #f0f8ff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.createForm input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Поля для пошуку */
+.searchInput {
+  padding: 8px;
+  width: 70%;
+  margin-right: 10px;
+}
+
+.searchButton {
+  padding: 8px 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Кнопка додавання журналу */
+.createButton {
+  background-color: #28a745;
+  padding: 10px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.createButton:hover {
+  background-color: #218838;
+}
