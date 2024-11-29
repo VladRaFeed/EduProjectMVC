@@ -8,11 +8,6 @@ const fetchAdvert = (req, res) => {
     })
 }
 
-//     _id: Number,
-//     User: String,
-//     CreatedAt: String,
-//     Text: String,
-
 const createAdvert = (async(req,res) => {
     const data = req.body
     const newAdvert = {}

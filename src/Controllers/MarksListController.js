@@ -104,8 +104,6 @@ const searchMarksListByGroupName = async (req, res) => {
     }
 };
 
-
-
 module.exports = {
     fetchMarksLists,
     createMarksList,
