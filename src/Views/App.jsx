@@ -1,6 +1,6 @@
 // import axios from "axios";
 // import { useEffect, useState} from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Layout from "./Layout/Layout";
 import MainView from "./pages/Main/MainView";
 import CourseView from "./pages/Course/CourseView";
@@ -35,6 +35,7 @@ export const App = () => {
             <Route path="createCourse" element={<CreateCourse />} />
           </Route>
           <Route path="/marks" element={<MarksView/>} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
     </div>
