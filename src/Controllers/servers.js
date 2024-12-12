@@ -11,7 +11,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-mongoose.connect('mongodb+srv://yourHappyPet:ERNKQd7TeNi0726j@cluster0.2dvlxil.mongodb.net/educationproj-database')
+mongoose.connect('YourDatabaseLink')
 
 app.get("/getUsers", fetchUsers)
 app.post("/createUser", createUser)
